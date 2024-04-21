@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoose')
+const { Schema, model, SchemaTypes } = require('mongoose')
 const MediaSchema = Schema({
     serial: {
         type: String,
@@ -32,25 +32,25 @@ const MediaSchema = Schema({
         type: String,
         required: true
     },
-    genero: {
-        type: Schema.Types.ObjectId,
+    nombreGenero: {
+        type: SchemaTypes.ObjectId,
         ref: 'genero',
-        required: true
+        require: true
     },
-    director: {
-        type: Schema.Types.ObjectId,
+    nombreDirector: {
+        type: SchemaTypes.ObjectId,
         ref: 'director',
-        required: true
+        require: true
     },
-    productora: {
-        type: Schema.Types.ObjectId,
+    nombreProductora: {
+        type: SchemaTypes.ObjectId,
         ref: 'productora',
-        required: true
+        require: true
     },
-    tipo: {
-        type: Schema.Types.ObjectId,
+    nombreTipo: {
+        type: SchemaTypes.ObjectId,
         ref: 'tipo',
-        required: true
+        require: true
     }
 })
 
